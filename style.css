@@ -1,14 +1,75 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 50px;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
-h1 {
-    color: blue;
+h1, h2 {
+    color: #333;
 }
 
-p {
-    color: red;
+.container {
+    display: flex; /* Размещаем блоки в ряд */
+    gap: 20px; /* Расстояние между картинкой и формой */
+    margin-top: 20px;
+}
+
+.image-block {
+    flex: 1; /* Картинка занимает 1 часть пространства */
+}
+
+.image-block img {
+    max-width: 100%; /* Картинка не выходит за пределы блока */
+    height: auto;
+    border-radius: 10px; /* Закруглённые углы */
+}
+
+.comments-block {
+    flex: 2; /* Форма занимает 2 части пространства */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#comments-list {
+    margin-top: 20px;
+}
+
+.comment {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
