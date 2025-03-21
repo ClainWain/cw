@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Мой первый сайт</title>
-        <link rel="stylesheet" href="style.css">
+    <title>Мой сайт с комментариями</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Ответь на вопрос...</h1>
     <p>сосал?</p>
     <p>чупа-чупс..</p>
-    <img src="sosal.jpg" alt="sosal.jpg">
+
+    <div class="container">
+        <!-- Блок с картинкой -->
+        <div class="image-block">
+            <img src="sosal.jpg" alt="sosal.jpg">
+        </div>
+
+        <!-- Блок с формой для комментариев -->
+        <div class="comments-block">
+            <h2>Оставить ответ (если не трус!)</h2>
+            <form id="comment-form">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="comment">Ваш ответ:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+
+            <div id="comments-list">
+                <!-- Сюда будут добавляться комментарии -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
